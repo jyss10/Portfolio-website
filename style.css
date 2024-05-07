@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 100px;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+}
+
+.container img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 20px;
+}
+
+.container h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+.container p {
+    color: red;
+    font-family: monospace;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.container button {
+    background-color: blue;
+    color: white;
+    padding: 9px 80px;
+    text-align: center;
+    font-size: 16px;
+    margin: 8px 8px;
+    cursor: pointer;
+    border: solid white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.profile-section {
+    text-align: left;
+    padding: 20px;
+}
+
+.profile-section h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-section p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.profile-section .contact-section {
+    margin-bottom: 20px;
+}
+
+.profile-section .technical-skillset {
+    margin-bottom: 20px;
+}
+
+.contact-section h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.technical-skillset h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.technical-skillset ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.technical-skillset ul li {
+    color: #fff;
+    font-size: 16px;
+}
