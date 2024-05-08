@@ -5,8 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<style>
-</style>
 <body bgcolor="white">
     <div class="container">
         <img src="angel.jpg" alt="hello">
@@ -37,23 +35,16 @@
                 <td bgcolor="#71BDBD" width="35%" valign="top" class="profile-section"> <!-- Added valign="top" to align content at the top -->
                     <div class="contact-section">
                         <h2>Personal Information</h2>
-                        <p><i class="fas fa-user"></i> </p>         
-                        <p><i class="fas fa-birthday-cake"></i> </p>     
-                        <p><i class="fas fa-venus-mars"></i> </p>          
-                        <p><i class="fas fa-phone"></i> <a href="tel:+639324299630"></a></p>
-                        <p><i class="fas fa-map-marker-alt"></i> </p>
+                        <p><i class="fas fa-user"></i> <span id="name"></span></p>         
+                        <p><i class="fas fa-birthday-cake"></i> <span id="birthdate"></span></p>     
+                        <p><i class="fas fa-venus-mars"></i> <span id="gender"></span></p>          
+                        <p><i class="fas fa-phone"></i> <span id="phoneNumber"></span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span id="address"></span></p>
                     </div>
                     <br>
                     <div class="technical-skillset">
                         <h2>Skills</h2>
-                        <ul id="skills">
-                            <li>
-                                <p></p>
-                            </li>
-                            <li>
-                                <p></p>
-                            </li>
-                        </ul>
+                        <ul id="skills"></ul>
                     </div>
                 </td>
 
@@ -63,23 +54,7 @@
                     <div class="experience">
                         <table cellpadding="7" width="100%">
                             <tr bgcolor="#1E2837"><th colspan="2"><font color="white">Work Experience</font></th></tr>
-                            <tr>
-                                <td valign="top"> <!-- Added valign="top" to align content at the top -->
-                                    <h4></h4>
-                                    <h4></h4>
-                                    <p></p>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top"> <!-- Added valign="top" to align content at the top -->
-                                    <h4></h4>
-                                    <h4></h4>
-                                    <p></p>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
+                            <tbody id="experience"></tbody>
                         </table>
                     </div>
 
@@ -89,27 +64,7 @@
                     <div class="education">
                         <table cellpadding="7" width="100%">
                             <tr bgcolor="#1E2837"><th colspan="2"><font color="white">Education</font></th></tr>
-                            <tr>
-                                <td><h4></h4></td>
-                                <td>
-                                    <h4></h4>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><h4></h4></td>
-                                <td>
-                                    <h4></h4>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><h4></h4></td>
-                                <td>
-                                    <h4></h4>
-                                    <p></p>
-                                </td>
-                            </tr>
+                            <tbody id="education"></tbody>
                         </table>
                     </div>
 
@@ -119,20 +74,7 @@
                     <div class="references">
                         <table cellpadding="7" width="100%">
                             <tr bgcolor="#1E2837"><th colspan="2"><font color="white">Personal References</font></th></tr>
-                            <tr>
-                                <td><h4></h4></td>
-                                <td>
-                                    <p></p>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><h4></h4></td>
-                                <td>
-                                    <p></p>
-                                    <p></p>
-                                </td>
-                            </tr>
+                            <tbody id="references"></tbody>
                         </table>
                     </div>
 
