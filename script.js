@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'http://localhost:3000/portfolio'; // Change to your web service URL
+    const apiUrl = 'https://portfolio-webservice-f4o1.onrender.com'; // Change to your web service URL
 
-    fetch('https://portfolio-webservice-f4o1.onrender.com')
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             // Update personal information
