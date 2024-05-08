@@ -1,3 +1,4 @@
+if (typeof document !== 'undefined') {
 document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'https://portfolio-webservice-f4o1.onrender.com/portfolio';
 
@@ -74,4 +75,5 @@ function calculateAge(birthdate) {
         age--;
     }
     return age;
+}
 }
