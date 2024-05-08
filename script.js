@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const apiUrl = 'https://portfolio-webservice-f4o1.onrender.com'; // Change to your web service URL
+    const apiUrl = 'https://portfolio-webservice-f4o1.onrender.com/portfolio'; // Update to your web service endpoint
 
     fetch(apiUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             // Update personal information
-            const personalInfoDiv = document.getElementById('personalInfo');
+            const personalInfoDiv = document.querySelector('.contact-section');
             personalInfoDiv.innerHTML = `
                 <h2>Personal Information</h2>
                 <p><i class="fas fa-user"></i> ${data.personalInfo.Name}</p>
@@ -17,23 +22,34 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
 
             // Update skills
-            const skillsDiv = document.getElementById('skills');
-            skillsDiv.innerHTML = `
-                <h2>Skills</h2>
-                <ul>
-                    ${data.skills.map(skill => `<li><p>${skill.description} - ${skill.level}</p></li>`).join('')}
-                </ul>
-            `;
+            const skillsList = document.getElementById('skills');
+            skillsList.innerHTML = '';
+            data.skills.forEach(skill => {
+                const li = document.createElement('li');
+                li.textContent = `${skill.description} - ${skill.level}`;
+                skillsList.appendChild(li);
+            });
 
             // Update work experience
-            const workExperienceDiv = document.getElementById('workExperience');
+            const workExperienceDiv = document.querySelector('.experience');
             workExperienceDiv.innerHTML = `
                 <h2>Work Experience</h2>
                 <ul>
                     ${data.workExperience.map(exp => `<li><h4>${exp.year}</h4><h4>${exp.designation}</h4><p>${exp.company}</p><p>${exp.details}</p></li>`).join('')}
                 </ul>
             `;
-            const referencesDiv = document.getElementById('references');
+            
+            // Update education
+            const educationDiv = document.querySelector('.education');
+            educationDiv.innerHTML = `
+                <h2>Education</h2>
+                <ul>
+                    ${data.education.map(edu => `<li>${edu.school} - ${edu.year}</li>`).join('')}
+                </ul>
+            `;
+
+            // Update personal references
+            const referencesDiv = document.querySelector('.references');
             referencesDiv.innerHTML = `
                 <h2>Personal References</h2>
                 <ul>
