@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'https://portfolio-webservice-f4o1.onrender.com/portfolio';
 
- 	fetch('/portfolio')
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             // Update personal information
@@ -42,7 +42,4 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         })
         .catch(error => console.error('Error fetching data:', error));
-}
-
-// Call fetchData function when the page loads
-window.onload = fetchData;
+});
