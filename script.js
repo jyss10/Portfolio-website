@@ -39,13 +39,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 </ul>
             `;
             
-            // Update education
+            // Update education             
             const educationDiv = document.querySelector('.education');
             educationDiv.innerHTML = `
-                <h2>Education</h2>
-                <ul>
-                    ${data.education.map(edu => `<li>${edu.school} - ${edu.year}</li>`).join('')}
-                </ul>
+                <div class="education">
+                    <table cellpadding="7" width="100%">
+                        <tr bgcolor="#1E2837"><th colspan="2"><font color="white">Education</font></th></tr>
+                        ${data.education.map(edu => `
+                            <tr>
+                                <td><h4>${edu.school}</h4></td>
+                                <td>
+                                    <h4>${edu.year}</h4>
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </table>
+                </div>
             `;
 
             // Update personal references
